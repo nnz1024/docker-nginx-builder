@@ -1,4 +1,4 @@
-FROM python:3.8-slim-buster AS builder
+FROM debian:buster-slim AS builder
 
 ARG NGINX_VERSION=1.18.0
 
@@ -7,7 +7,8 @@ RUN apt-get update && \
     apt-get install -y tzdata locales wget build-essential autogen automake autoconf \
     autotools-dev libreadline-dev libncurses5-dev libpcre3 libpcre3-dev libpng-dev \
     dh-make quilt lsb-release debhelper dpkg-dev dh-systemd pkg-config \
-    zlib1g-dev libssl-dev openssl git  perl libtool tar unzip xutils-dev
+    zlib1g-dev libssl-dev openssl git  perl libtool tar unzip xutils-dev \
+    python3-pip python3-apt
 
 # Set timezone and locale
 ENV TZ Europe/Moscow
