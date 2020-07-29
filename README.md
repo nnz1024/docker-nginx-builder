@@ -23,7 +23,8 @@ To build Nginx with current config (by default:
 [mod-vts](https://github.com/vozlt/nginx-module-vts),
 [headers-more](https://github.com/openresty/headers-more-nginx-module),
 [http_subs_filter](https://github.com/yaoweibin/ngx_http_substitutions_filter_module)),
-simply type something like
+[geoip2](https://github.com/leev/ngx_http_geoip2_module) (yes, external dependency
+libmaxminddb0 will be added automatically, +100 kilobytes), simply type something like
 ```
 docker build . --build-arg="NGINX_VERSION=1.19.1" -t "your-repo/nginx:1.19.1-custom"
 ```
