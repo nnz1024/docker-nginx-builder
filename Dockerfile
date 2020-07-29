@@ -1,7 +1,5 @@
 FROM debian:buster-slim AS builder
 
-ARG NGINX_VERSION=1.18.0
-
 ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update && \
     apt-get install -y tzdata locales wget build-essential autogen automake autoconf \
@@ -22,6 +20,8 @@ ENV LANGUAGE en_US.UTF-8
 WORKDIR /nginx-builder
 COPY builder /nginx-builder
 RUN pip3 install -r requirements.txt 
+
+ARG NGINX_VERSION=1.18.0
 
 # Config intentionally placed to separate cache level to prevent
 # pip3 install re-runs in config change
