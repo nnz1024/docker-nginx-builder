@@ -19,10 +19,10 @@ just look at the `docker images` output).
 
 # Building
 
-To build Nginx with current config (by default:
+To build Nginx with current config, which includes
 [mod-vts](https://github.com/vozlt/nginx-module-vts),
 [headers-more](https://github.com/openresty/headers-more-nginx-module),
-[http_subs_filter](https://github.com/yaoweibin/ngx_http_substitutions_filter_module)),
+[http_subs_filter](https://github.com/yaoweibin/ngx_http_substitutions_filter_module),
 [geoip2](https://github.com/leev/ngx_http_geoip2_module) (yes, external dependency
 libmaxminddb0 will be added automatically, +100 kilobytes), simply type something like
 ```
