@@ -34,6 +34,13 @@ versions of additional modules (as well as custom build options) via `config.yam
 
 Build was tested with modules listed above with Nginx 1.18.0 and 1.19.3.
 
+# Automatic reloading Nginx on config change
+
+This project includes scripts which can watch Nginx config via inotify and reload Nginx
+on any changes. Not enabled (and even not included in image) by default.
+
+If you are interested, see in [AUTORELOAD.md](AUTORELOAD.md) how to enable and use it.
+
 # FAQ
 
 - **Does it support Alpine-based builds?** No. Sorry. Nginx-builder supports only RPM
