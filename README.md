@@ -32,7 +32,7 @@ docker build . --build-arg="NGINX_VERSION=1.19.1" -t "your-repo/nginx:1.19.1-cus
 You can set Nginx version via `NGINX_VERSION` build argument, and specify sources and 
 versions of additional modules (as well as custom build options) via `config.yaml`.
 
-Build was tested with modules listed above with Nginx 1.18.0, 1.19.0 and 1.19.1.
+Build was tested with modules listed above with Nginx 1.18.0 and 1.19.3.
 
 # FAQ
 
