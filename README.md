@@ -26,13 +26,13 @@ To build Nginx with current config, which includes
 [geoip2](https://github.com/leev/ngx_http_geoip2_module) (yes, external dependency
 libmaxminddb0 will be added automatically, +100 kilobytes), simply type something like
 ```
-docker build . --build-arg="NGINX_VERSION=1.19.1" -t "your-repo/nginx:1.19.1-custom"
+docker build . --build-arg="NGINX_VERSION=1.20.0" -t "your-repo/nginx:1.20.0-custom"
 ```
 
 You can set Nginx version via `NGINX_VERSION` build argument, and specify sources and 
 versions of additional modules (as well as custom build options) via `config.yaml`.
 
-Build was tested with modules listed above with Nginx 1.18.0 and 1.19.3.
+Build was tested with modules listed above with Nginx 1.18.0, 1.19.10 and 1.20.0.
 
 # Automatic reloading Nginx on config change
 
